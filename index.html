@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3W//DTD HTML 4.0 TRANSITIONAL//EN">
+<html>
+<head>
+    <title>ejemplo 2</title>
+    <script type="text/javascript" src="objetoAjax.js"></script>
+    <script type="text/javascript">
+        function verarchivo(){ //al pausar boton
+        pagina = new ObjetoAyax(); //instanciamos objetos
+        ajax=pagina.objeto; //devolvemos el XMLHttpRequest
+        ajax.open("GET", "ejemplo2.txt",true); //preparamos envio
+        //devolver texto al cargarse archivo
+        ajax.onreadystatechange=function(){
+            if(ajax.readyState==4 && ajax.status==200){
+                texto=ajax.responseText;
+                document.getElementById("cont").innerHTML=texto;
+            }
+        }
+        ajax.send(); //enviar
+    }
+    </script>
+</head>
+<body>
+    <h1>cargar un archivo mediante objetoAyax</h1>
+    <h3><input type="button" onclick="verarchivo()" value="Ver Archivo"></h3>
+    <!--insertamos en el siguiente id el archivo de texto-->
+    <p id="cont">insertar archivo:</p>
+</body>
+</html>

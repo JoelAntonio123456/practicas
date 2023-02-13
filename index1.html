@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo AJAX</title>
+    <!--<style>
+        p{color: #FF0000;} 
+    </style>--->
+    <script type="text/javascript">
+        function ejecutandoAJAX(){
+            var ajaxRequest;
+            if(window.XMLHttpRequest){
+                ajaxRequest = new XMLHttpRequest();
+            }else{
+                ajaxRequest = new ActiveXObject(Microsoft.XMLHTTP);
+            } 
+            ajaxRequest.open("GET", "text.txt", true);
+            ajaxRequest.onreadystatechange = function(){
+                if(ajaxRequest.readyState == 4 && ajaxRequest.status == 200){
+                    document.getElementById('mitexto').innerHTML = ajaxRequest.responseText;
+                }
+            };
+            ajaxRequest.send();
+            alert("solictud enviada");
+        }
+    </script>
+</head>
+<body>
+    <!--<h3><input type="button" onclick="verarchivo()" value="Ver Archivo"></h3>-->
+    <button type="button" onclick="ejecutandoAJAX()">DAR CLICK</button>
+    <p id='mitexto'>insertar archivo:</p>
+
+</body>
+</html>
