@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="form" method="get">
+        <label for="name" class="form__label label">
+            <span class="label__name">Nombre</span>
+            <input class="label__input" type="text" name="name" id="name" placeholder="Tu nombre" required>
+        </label>
+
+        <label for="email" class="form__label label">
+            <span class="label__name">Correo</span>
+            <input class="label__input" type="email" name="email" id="email" placeholder="ejemplo@gmail.com" required>
+        </label>
+
+        <label for="inputRandom" class="form__label label">
+            <span class="label__name">Numero Random</span>
+            <input class="label__input" type="text" name="random" id="inputRandom" value="cargando..." readonly>
+        </label>
+
+        <button class="form__btn">SEND FEEDBACK</button>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
