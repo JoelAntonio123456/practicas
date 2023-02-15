@@ -1,13 +1,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+
+
 
 :root {
     --bodyBg: #ffffff;
     --formularioBg: #FEFEFF;
-    --formularioBtn: #2C3DCB;
-    --formularioName: #949597;
+    --formularioName: hsla(220, 1%, 59%, 0.747);
     --inputBg: #FCFCFC;
-    --inputBorder: #E4E4E4;
+    --inputBorder: hsl(263, 82%, 35%);
     --placehoderColor: #E4E4E4;
     --border-radius: 3px;
 }
@@ -24,13 +27,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: green;
 }
+
 
 .form {
     background-color: var(--formularioBg);
     width: 570px;
     box-shadow: 0 0 50px 1px #0000003a;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 40px;
     font-family: 'Roboto', sans-serif;
 }
@@ -59,7 +64,7 @@ body {
 
 .label__input {
     border: 1px solid var(--inputBorder);
-    border-radius: 3px;
+    border-radius: 10px;
     background-color: var(--inputBg);
 }
 
@@ -71,10 +76,12 @@ body {
     background-color: var(--formularioBtn);
     color: #fff;
     cursor: pointer;
+    border-radius: 10px;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .form {
         width: 90%;
         padding: 20px;
@@ -92,3 +99,48 @@ body {
         padding: 10px 5px;
     }
 }
+.cabeza{
+    font-family: 'cairo';
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+h1{
+    background-image: url(https://media.giphy.com/media/t2aAdTgnU9Ie6jvG0W/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+    .div3 { grid-area: 1 / 3 / 2 / 4; }
+
+    div.presen{
+        position: absolute;
+        width: 550px; /*ancho del div(es una capa)*/
+        height: 60px; /*alto del div(es una capa)*/
+        color: red; /*color de letra dentro de div*/
+        background-color: black; /*color de fondo del DIV*/
+        /*centro vertical*/
+        display: flex; 
+        justify-content: center; /*alineacion*/
+        flex-direction: column; /* la forma depresentar sera eb columna*/
+        box-shadow: 10px 10px   7px rgba(10, 10, 224, 0.30);
+        border-radius: 15px;
+        font-size: 30px;
+        }
