@@ -1,11 +1,9 @@
-
-const inputRandomNumber = document.getElementById('inputRandom');
-
-window.addEventListener('load', () => {
-    getRandomNumber();
-})
-
-function getRandomNumber() {
-    let randomNumber = Math.random().toString().slice(2, 8);
-    inputRandomNumber.value = randomNumber;
-}
+const buttons = document.querySelectorAll('.container button');
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        buttons.forEach(button => {
+            button.classList.remove('selected');
+        });      
+        button.classList.add('selected');
+    });
+});
